@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table elements</title>
+</head>
+<body>
+    <!-- 
+        table
+            - caption
+            - thead
+            - tbody
+            - tfoot
+        tr (table row): dòng
+            - th (table heading): ô (cell) chứa nhãn, tiêu đề
+            - td (table data): ô (cell) chứa dữ liệu
+                - rowspan: value (gộp/ mở rộng ô trên cùng 1 cột đúng bằng value)
+                - colspan: value (gộp/ mở rộng ô trên cùng 1 dòng đúng bằng value)
+     -->
+     <table border="1">
+        <caption>Travel Expense Report</caption>
+        <thead>
+            <tr>
+                <th></th>
+                <th>Meals</th>
+                <th>Hotels</th>
+                <th>Transport</th>
+                <td>subtotals</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>San Jose</th>
+                <td colspan="3"></td>
+                <td rowspan="3"></td>
+            </tr>
+            <tr>
+                <td>25-Aug-97</td>
+                <td>37.74</td>
+                <td>112.00</td>
+                <td>45.00</td>
+            </tr>
+            <tr>
+                <td>26-Aug-97</td>
+                <td>27.28</td>
+                <td>122.00</td>
+                <td>45.00</td>
+            </tr>
+            <tr>
+                <td>subtotals</td>
+                <td>65.02</td>
+                <td>224.00</td>
+                <td>90.00</td>
+                <td>379.02</td>
+            </tr>
+            <tr>
+                <th>Seattle</th>
+                <td colspan="3"></td>
+                <td rowspan="3"></td>
+            </tr>
+            <tr>
+                <td>27-Aug-97</td>
+                <td>96.25</td>
+                <td>109.00</td>
+                <td>36.00</td>
+            </tr>
+            <tr>
+                <td>28-Aug-97</td>
+                <td>35.00</td>
+                <td>109.00</td>
+                <td>36.00</td>
+            </tr>
+            <tr>
+                <td>subtotals</td>
+                <td>131.25</td>
+                <td>218.00</td>
+                <td>70.00</td>
+                <td>421.25</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th>Totals</th>
+                <td>196.27</td>
+                <td>442.00</td>
+                <td>162.00</td>
+                <th>800.27</th>
+            </tr>
+        </tfoot>
+     </table>
+</body>
+</html>
