@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+    <!-- form
+        Tạo ra một nơi để user giao tiếp với app
+        label (nhãn)
+        select: tạo ra 1 danh sách để lựa chọn
+            - option: một giá trị trong danh sách
+        button/input: tạo ra 1 nút
+            - type: 
+                + submit: gửi dữ liệu từ client lên server
+                + reset: clear form/ trả form về hiện trạng mặc định
+                + button: viết mã (js) để thực hiện nhiệm vụ cho button
+            Nếu sử dụng input thì
+            - value: để hiển thị nhãn của button
+        input(s): - type
+                    + text: nhập văn bản
+                    + password: nhập văn bản, nhưng văn bản này sẽ marked (dấu chấm)
+                    + email: dữ liệu phải có định dạng email
+                    + tel (telephone): dữ liệu phải có định dạng số điện thoại
+                    + radio (single selection): 1 lúc chỉ chọn được 1 giá trị
+                        (để group các radio thì phải có chung giá trị của attribute name)
+                    + checkbox: 1 lúc có thể chọn được nhiều giá trị
+                    + url (Uniform Resource Location): dữ liệu phải có định dạng của 1 địa chỉ web
+                    + date: hiển thị lịch để chọn ngày
+                    + datetime-local: hiển thị lịch gồm ngày và giờ
+                    + time: hiển thị giờ
+                    + month: hiển thị lịch theo tháng
+                    + week: hiển thị lịch theo tuần (có 52 tuần trong 1 năm, cộng trừ vài ngày)
+                    + required: bắt buộc phải cung cấp dữ liệu
+                    + placeholder
+     -->
+    <form>
+        <table>
+            <caption>
+                <h3>Sponsor Registration</h3>                
+            </caption>
+            <tbody>
+                <tr>
+                    <td>Password</td>
+                    <td>
+                        <input type="password">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Selection</td>
+                    <td>
+                        <select name="" id="">
+                            <option value="">Việt Nam</option>
+                            <option value="">Thái Lan</option>
+                            <option value="">Lào</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Check box</td>
+                    <td>
+                        <input type="checkbox">Football <br>
+                        <input type="checkbox">Walking <br>
+                        <input type="checkbox">Swiming
+                    </td>
+                </tr>
+                <tr>
+                    <td>Datetime</td>
+                    <td>
+                        <input type="date">
+                        <input type="time">
+                        <br>
+                        <input type="datetime-local">
+                        <br>
+                        <input type="month">
+                        <br>
+                        <input type="week">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="prefix">Prefix</label>
+                    </td>
+                    <td colspan="2">
+                        <input type="text" id="prefix">
+                    </td>
+                    <td>
+                        Company Description
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="">Name</label>
+                    </td>
+                    <td>
+                        <input type="text" placeholder="First Name">
+                    </td>
+                    <td>
+                        <input type="text" placeholder="Last Name">
+                    </td>
+                    <td>
+                        <textarea cols="30" rows="3"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <label for="">Preferred Pronouns</label>
+                    </td>
+                    <td>
+                        <input type="text">
+                    </td>
+                    <td>
+                        Company Facebook Page
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="">Email</label>
+                    </td>
+                    <td colspan="2">
+                        <input type="email" placeholder="sample@example.com" >
+                    </td>
+                    <td>
+                        <input type="text">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="">Work Phone</label>
+                    </td>
+                    <td colspan="2">
+                        <input type="tel">
+                    </td>
+                    <td>
+                        Company Twitter Handle
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="">Cell Phone</label>
+                    </td>
+                    <td colspan="2">
+                        <input type="tel">
+                    </td>
+                    <td>
+                        <input type="text">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="">Company</label>
+                    </td>
+                    <td colspan="2">
+                        <input type="text">
+                    </td>
+                    <td>
+                        Sponsorship Level
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3">
+                        Full Bisiness Address
+                    </td>
+                    <td>
+                        <input type="radio" name="sponsorship"> Gold <br>
+                        <input type="radio" name="sponsorship"> Diamon <br>
+                        <input type="radio" name="sponsorship"> Platinum
+                    </td>
+                </tr>
+                <tr>
+                    <td>Company Website</td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="url" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <!-- <button type="submit">Submit</button>
+                        <button type="reset">Reset</button>
+                        <button type="button" ondblclick="alert('Bạn vừa click vào button')">Button</button> -->
+                        <input type="submit" value="Đăng ký">
+                        <input type="reset" value="Hủy">
+                        <input type="button" value="Thông báo" ondblclick="alert('Bạn vừa click vào button')">
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+</body>
+</html>
