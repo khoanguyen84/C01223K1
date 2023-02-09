@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Overview</title>
+</head>
+
+<body>
+    <!-- 
+        + Kết hợp JS với HTML thông qua event (sự kiện) của element đó
+        + Có 3 cách để kết hợp JS với event của element
+        + cách 1: (inline) viết mã JS trực tiếp vào trong event của element
+        + cách 2: (internal) Viết mã JS bên trong thẻ <script> và đặt tên tên cho hành đó, 
+                truyền hành động đó cho event của element
+        + cách 3: (external): Viết mã JS trong file, và file này có phần mở (extension) là .js.
+                liên kết file .js và file .html thông qua thẻ <script>
+     -->
+    <button onmouseover="this.innerText = new Date()"
+            onmouseout="this.innerText='Hover me to show datetime'"
+    >
+        Hover me to show datetime</button>
+
+
+    <p onmouseover="this.innerText = new Date()"
+        onmouseout="this.innerText='Hover me to show datetime'"
+    >Hover me to show datetime</p>
+</body>
+
+</html>
