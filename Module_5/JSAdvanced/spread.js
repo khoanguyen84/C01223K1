@@ -20,11 +20,36 @@ let std_1 = {
 // let std_2 = std_1;
 // let std_2 = {...std_1}
 // std_2.name = "Nhật";
-let std_2 = {
-    ...std_1,
-    name: "Nhật",
-    email: 'nhat@gmail.com'
+// let std_2 = {
+//     ...std_1,
+//     name: "Nhật",
+//     email: 'nhat@gmail.com'
+// }
+
+// console.log(std_1);
+// console.log(std_2);
+
+let bang = {
+    name: "Bằng",
+    age: 18,
+    gender: true,
+    language : {
+        name: "English",
+        level: "B1"
+    }
 }
 
-console.log(std_1);
-console.log(std_2);
+// let nhat = {
+//     ...bang,
+//     name: "Nhật",
+//     language: {
+//         ...bang.language,
+//         level: "B2"
+//     }
+// }
+
+let nhat = JSON.parse(JSON.stringify(bang))
+nhat.name = "Nhật";
+nhat.language.level = "B2"
+console.log(bang);
+console.log(nhat);
