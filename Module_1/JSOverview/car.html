@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control Car</title>
+</head>
+<body>
+    <!-- HTML Entities -->
+    <img id="car" src="images/right.jpg" alt="">
+    <div>
+        <button onclick="goToLeft()">&larr;</button>
+        <button onclick="goToUp()">&uarr;</button>
+        <button onclick="goToDown()">&darr;</button>
+        <button onclick="goToRight()">&rarr;</button>
+    </div>
+
+
+    <script>
+        function goToLeft(){
+            document.getElementById("car").src = "images/left.jpg";  
+        }
+        function goToRight(){
+            document.getElementById("car").src = "images/right.jpg";  
+        }
+        function goToUp(){
+            document.getElementById("car").src = "images/up.jpg";  
+        }
+        function goToDown(){
+            document.getElementById("car").src = "images/down.jpg";  
+        }
+    </script>
+</body>
+</html>
