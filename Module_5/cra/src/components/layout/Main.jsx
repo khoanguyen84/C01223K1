@@ -7,7 +7,7 @@ function Main() {
         alert('Hello')
     }
     return (
-        <main className="flex-shrink-0">
+        <>
             <div className="container">
                 <h1 className="mt-5">Sticky footer with fixed navbar</h1>
                 <p className="lead">
@@ -27,7 +27,7 @@ function Main() {
                 <Button href='https://google.com'>Go to my Site</Button>
                 <Button handleClick={handleSubmit}>Submit</Button>
             </div>
-        </main>
+        </>
 
     )
 }

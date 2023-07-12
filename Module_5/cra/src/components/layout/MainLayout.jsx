@@ -7,7 +7,11 @@ function MainLayout(props) {
     return (
         <div className='d-flex flex-column vh-100'>
             <Header />
-            {children}
+            <main className="flex-shrink-0">
+                <div className="container">
+                    {children}
+                </div>
+            </main>
             <Footer />
         </div>
     )
