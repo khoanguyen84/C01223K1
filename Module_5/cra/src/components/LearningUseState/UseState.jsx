@@ -13,6 +13,7 @@ import React, { useState } from "react";
 
 // Lưu ý:
 // 1. Mỗi khi gọi hàm setState() => component sẽ được re-render
+// 2. Nếu gọi nhiếu setSate() trong cùng 1 hàm (chức năng) thì component chỉ re-render 1 lần
 
 
 // function UseState(){
@@ -32,13 +33,18 @@ import React, { useState } from "react";
 function UseState(){
     // Logic
     const [count, setCount] = useState(1000)
-    console.log(`render_${count} `);
     // UI
+    const handleIncrement = () => {
+        // setCount(count + 1)
+        setCount((prev) => prev + 1)
+        setCount((prev) => prev + 1)
+        setCount((prev) => prev + 1)
+    }
+    console.log('render');
     return (
         <div>
             <h1>{count}</h1>
-            <p>{count}</p>
-            <button onClick={() => setCount(count + 1)}>Increament</button>
+            <button onClick={handleIncrement}>Increament</button>
         </div>
     )
 }
