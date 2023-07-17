@@ -1,13 +1,14 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Header() {
     return (
         <header>
-            <nav className="navbar navbar-expand-md navbar-dark fixed-top bg-warning">
+            <nav className="navbar navbar-expand-md navbar-light fixed-top bg-warning">
                 <div className="container-fluid">
-                    <a className="navbar-brand" href="#">
-                        Fixed navbar
-                    </a>
+                    <Link className="navbar-brand" to={"/"}>
+                        Logo
+                    </Link>
                     <button
                         className="navbar-toggler"
                         type="button"
@@ -22,24 +23,22 @@ function Header() {
                     <div className="collapse navbar-collapse" id="navbarCollapse">
                         <ul className="navbar-nav me-auto mb-2 mb-md-0">
                             <li className="nav-item">
-                                <a className="nav-link active" aria-current="page" href="#">
-                                    Home
-                                </a>
+                                <Link className="nav-link" aria-current="page" to={"/main"}>
+                                    Main
+                                </Link>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="#">
-                                    Link
-                                </a>
+                                <Link className="nav-link" to={'/learning-use-state'}>
+                                    Learning useState
+                                </Link>
                             </li>
                             <li className="nav-item">
-                                <a
-                                    className="nav-link disabled"
-                                    href="#"
-                                    tabIndex={-1}
-                                    aria-disabled="true"
+                                <Link
+                                    className="nav-link"
+                                    to={'/learning-use-effect'}
                                 >
-                                    Disabled
-                                </a>
+                                    Learning useEffect
+                                </Link>
                             </li>
                         </ul>
                         <form className="d-flex">

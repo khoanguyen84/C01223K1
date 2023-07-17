@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function StudentProfile(props) {
     const {student} = props
@@ -10,7 +11,7 @@ function StudentProfile(props) {
                 <p className="card-text">Gender: {student.gender}</p>
                 <p className="card-text">Mark: {student.mark}</p>
                 <p className="card-text">City: {student.city}</p>
-                <a href="#" className="btn btn-primary">Detail</a>
+                <Link to={`/student-detail/${student.id}`} className="btn btn-primary">Detail</Link>
             </div>
         </div>
     )
