@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Spinner from "../layout/Spinner";
 import StudentProfile from "./StudentProfile";
+import { Link } from 'react-router-dom';
 
 // cú pháp
 // useEffect(callback, [deps])
@@ -91,7 +92,10 @@ function StudentList() {
 
             </div>
             <div>
-                <h1>Student List</h1>
+                <div className="d-flex align-items-center">
+                    <h1 className="me-2 text-warning">Student List</h1>
+                    <Link to={"/student/create"} className="btn btn-outline-warning btn-sm">Create Student</Link>
+                </div>
                 {
                     loading ? <Spinner /> : (
                         <div className="row">

@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 function Header() {
     return (
@@ -23,9 +23,10 @@ function Header() {
                     <div className="collapse navbar-collapse" id="navbarCollapse">
                         <ul className="navbar-nav me-auto mb-2 mb-md-0">
                             <li className="nav-item">
-                                <Link className="nav-link" aria-current="page" to={"/main"}>
+                                <NavLink className='nav-link'
+                                    to={"/main"}>
                                     Main
-                                </Link>
+                                </NavLink>
                             </li>
                             <li className="nav-item">
                                 <Link className="nav-link" to={'/learning-use-state'}>
